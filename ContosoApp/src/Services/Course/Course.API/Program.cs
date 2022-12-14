@@ -5,11 +5,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-var con = builder.Configuration.GetConnectionString("DefaultConnection");
-
+var connectionString = Environment.GetEnvironmentVariable("COURSE_DB_CONNECTION_STRING");
 builder.Services.AddDbContext<CourseContext>(
-    options => options.UseSqlServer(
-        con
+    options => options.UseNpgsql(
+        connectionString
     )
 );
 
@@ -26,6 +25,12 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+
+using (var serviceScope = ((IApplicationBuilder)app).ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+{
+    var context = serviceScope.ServiceProvider.GetRequiredService<CourseContext>();
+    context.Database.Migrate();
 }
 
 app.UseHttpsRedirection();

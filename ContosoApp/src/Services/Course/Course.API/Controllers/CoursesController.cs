@@ -26,7 +26,7 @@ namespace Course.API.Controllers
 
         // GET: api/Courses/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Model.Entities.Course>> GetAgence(Guid id)
+        public async Task<ActionResult<Model.Entities.Course>> GetAgence(int id)
         {
             var course = await _context.Courses.FindAsync(id);
 
@@ -77,7 +77,7 @@ namespace Course.API.Controllers
             _context.Courses.Add(course);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCourse", new { CourseID = course.CourseID }, course);
+            return CreatedAtAction("GetCourses", new { id = course.CourseID }, course);
         }
 
         // DELETE: api/Courses/5

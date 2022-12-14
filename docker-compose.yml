@@ -3,31 +3,27 @@ version: '3.4'
 services:
   course.api:
     image: contoso/course-api:${TAG:-latest}
+    depends_on:
+     - "postgres_image"
     build:
       context: .
       dockerfile: ContosoApp/src/Services/Course/Course.API/Dockerfile
-
-    environment:
-      - ConnectionString=Server=sqldata;Initial Catalog=CourseDb;User Id=sa;Password=Pass@word
-    expose:
-      - "80"
     ports:
       - "5101:80"
-    #extra hosts can be used for standalone SQL Server or services at the dev PC
-    extra_hosts:
-      - "CESARDLSURFBOOK:10.0.75.1"
-    depends_on:
-      - sqldata
+    environment:
+      COURSE_DB_CONNECTION_STRING: "Server=postgres_image;port=5432; database=courseDb;username=postgres;password=Admin1*"
 
   student.api:
     image: contoso/student-api:${TAG:-latest}
+    depends_on:
+     - "postgres_image"
     build:
       context: .
       dockerfile: ContosoApp/src/Services/Student/Student.API/Dockerfile
-    expose:
-      - "81"
     ports:
       - "5102:81"
+    environment:
+      STUDENT_DB_CONNECTION_STRING: "Server=postgres_image;port=5432; database=studentDb;username=postgres;password=Admin1*"
 
   enrollement.api:
     image: ${DOCKER_REGISTRY-}enrollement-api
@@ -37,12 +33,25 @@ services:
     depends_on:
       - course.api
       - student.api
-      - sqldata
 
-  sqldata:
-    image: mcr.microsoft.com/mssql/server:2017-latest
-    environment:
-      - SA_PASSWORD=Pass@word
-      - ACCEPT_EULA=Y
+  postgres_image:
+    image: postgres:latest
     ports:
-      - "5434:1433"
+      - "5432"
+    restart: always
+    volumes:
+      - db_volume:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "Admin1*"
+      POSTGRES_DB: "courseDb"
+
+  #pgadmin: 
+  #  image: dpage/pgadmin4
+
+volumes:
+  db_volume:
+
+#volumes:
+#  postgres_data:
+#  pgadmin_data:
