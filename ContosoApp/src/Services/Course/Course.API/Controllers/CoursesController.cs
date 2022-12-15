@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Course.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class CoursesController : ControllerBase
     {
         private readonly CourseContext _context;
@@ -40,15 +40,10 @@ namespace Course.API.Controllers
 
         // PUT: api/Courses/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCourse(int id, Model.Entities.Course course)
+        [HttpPut]
+        public async Task<IActionResult> PutCourse(Model.Entities.Course course)
         {
-            if (id != course.CourseID)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(course).State = EntityState.Modified;
+            _context.Courses.Update(course);
 
             try
             {
@@ -56,7 +51,7 @@ namespace Course.API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CourseExists(id))
+                if (!CourseExists(course.CourseID))
                 {
                     return NotFound();
                 }

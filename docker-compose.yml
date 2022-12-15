@@ -1,43 +1,53 @@
 version: '3.4'
+#:${TAG:-latest}
+networks:
+  backend:
 
 services:
   course.api:
-    image: contoso/course-api:${TAG:-latest}
+    container_name: course-api
+    image: ${DOCKER_REGISTRY-}course.api
     depends_on:
      - "postgres_image"
     build:
       context: .
       dockerfile: ContosoApp/src/Services/Course/Course.API/Dockerfile
-    ports:
-      - "5101:80"
+    networks:
+     - backend
     environment:
       COURSE_DB_CONNECTION_STRING: "Server=postgres_image;port=5432; database=courseDb;username=postgres;password=Admin1*"
 
   student.api:
-    image: contoso/student-api:${TAG:-latest}
+    container_name: student-api
+    image: ${DOCKER_REGISTRY-}student.api
     depends_on:
      - "postgres_image"
     build:
       context: .
       dockerfile: ContosoApp/src/Services/Student/Student.API/Dockerfile
-    ports:
-      - "5102:81"
+    networks:
+     - backend
     environment:
       STUDENT_DB_CONNECTION_STRING: "Server=postgres_image;port=5432; database=studentDb;username=postgres;password=Admin1*"
 
   enrollement.api:
-    image: ${DOCKER_REGISTRY-}enrollement-api
+    container_name: enrollement-api
+    image: ${DOCKER_REGISTRY-}enrollement.api
     build:
       context: .
       dockerfile: ContosoApp/src/Services/Enrollement/Enrollement.API/Dockerfile
+    networks:
+     - backend
     depends_on:
       - course.api
       - student.api
 
   postgres_image:
     image: postgres:latest
+    networks:
+     - backend
     ports:
-      - "5432"
+      - "5432:80"
     restart: always
     volumes:
       - db_volume:/var/lib/postgresql/data
@@ -46,12 +56,24 @@ services:
       POSTGRES_PASSWORD: "Admin1*"
       POSTGRES_DB: "courseDb"
 
-  #pgadmin: 
-  #  image: dpage/pgadmin4
+  contosoapi.gateway:
+    container_name: "contoso-gateway"
+    image: ${DOCKER_REGISTRY-}contosoapigateway
+    build:
+      context: .
+      dockerfile: ContosoApp/src/ApiGateways/ContosoAPI.Gateway/Dockerfile
+    networks:
+     - backend
+    ports:
+      - "8001:80"
 
 volumes:
   db_volume:
 
+  #pgadmin: 
+  #  image: dpage/pgadmin4
+
 #volumes:
 #  postgres_data:
 #  pgadmin_data:
+

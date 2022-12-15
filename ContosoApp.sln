@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Student.Infrastructure", "C
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3B53CED6-5A9C-4FEC-B6C7-9453C7F20988}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoAPI.Gateway", "ContosoApp\src\ApiGateways\ContosoAPI.Gateway\ContosoAPI.Gateway.csproj", "{70489C4A-9383-4DE6-A968-29E153A18855}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{3B53CED6-5A9C-4FEC-B6C7-9453C7F20988}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B53CED6-5A9C-4FEC-B6C7-9453C7F20988}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B53CED6-5A9C-4FEC-B6C7-9453C7F20988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70489C4A-9383-4DE6-A968-29E153A18855}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70489C4A-9383-4DE6-A968-29E153A18855}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70489C4A-9383-4DE6-A968-29E153A18855}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70489C4A-9383-4DE6-A968-29E153A18855}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +99,7 @@ Global
 		{7E3A1210-565D-4EBF-B442-655DD7662103} = {25CC30A2-4F35-466F-B21B-D034C6E23ABB}
 		{884D0467-DD91-4666-87E0-F42031BA0487} = {25CC30A2-4F35-466F-B21B-D034C6E23ABB}
 		{52AC8F10-0120-4C25-847F-7F95CE131964} = {25CC30A2-4F35-466F-B21B-D034C6E23ABB}
+		{70489C4A-9383-4DE6-A968-29E153A18855} = {E2766020-7278-4B0C-B2E1-AB8B2569D13E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {29A9CC37-DB16-4992-8145-AFB53D7ACFAC}

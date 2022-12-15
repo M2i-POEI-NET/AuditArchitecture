@@ -1,0 +1,93 @@
+{
+  "GlobalConfiguration": {
+    //"RequestIdKey": "OcRequestId",
+    //"AdministrationPath": "/administration"
+    "BaseUrl": "http://localhost:800"
+  },
+  "Routes": [
+    //Redirections routes for courses API
+    {
+      //Redirecting url
+      "DownstreamPathTemplate": "/api/courses",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "course.api",
+          "Port": 80
+        }
+      ],
+
+      //Incoming url
+      "UpstreamPathTemplate": "/courses",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+    {
+      "UpstreamPathTemplate": "/courses/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+
+      "DownstreamPathTemplate": "/api/courses/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "course.api",
+          "Port": 80
+        }
+      ]
+    },
+
+    //Redirections routes for student API
+    {
+      "DownstreamPathTemplate": "/api/students",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "student.api",
+          "Port": 80
+        }
+      ],
+
+      "UpstreamPathTemplate": "/students",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+    {
+      "UpstreamPathTemplate": "/students/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+
+      "DownstreamPathTemplate": "/api/students/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "student.api",
+          "Port": 80
+        }
+      ]
+    },
+    //Redirections routes for courses Enrollement
+    {
+      "DownstreamPathTemplate": "/api/enrollements",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "enrollement.api",
+          "Port": 80
+        }
+      ],
+
+      "UpstreamPathTemplate": "/enrollements",
+      "UpstreamHttpMethod": [ "POST", "PUT", "GET" ]
+    },
+    {
+      "UpstreamPathTemplate": "/enrollements/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ],
+
+      "DownstreamPathTemplate": "/api/enrollements/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "enrollement.api",
+          "Port": 80
+        }
+      ]
+    }
+  ]
+}

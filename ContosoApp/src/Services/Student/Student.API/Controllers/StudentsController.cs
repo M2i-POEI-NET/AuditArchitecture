@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Student.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class StudentsController : ControllerBase
     {
         private readonly StudentContext _context;
@@ -39,15 +39,10 @@ namespace Student.API.Controllers
 
         // PUT: api/Students/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutStudent(int id, Model.Entities.Student Student)
+        [HttpPut]
+        public async Task<IActionResult> PutStudent(Model.Entities.Student Student)
         {
-            if (id != Student.ID)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(Student).State = EntityState.Modified;
+            _context.Students.Update(Student);
 
             try
             {
@@ -55,7 +50,7 @@ namespace Student.API.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!StudentExists(id))
+                if (!StudentExists(Student.ID))
                 {
                     return NotFound();
                 }
