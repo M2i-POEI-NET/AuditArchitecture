@@ -28,8 +28,8 @@ x86/
 [Aa][Rr][Mm]64/
 bld/
 [Bb]in/
-[Oo]bj/
-![Oo]bj/Docker
+# [Oo]bj/
+# ![Oo]bj/Docker
 [Oo]ut/
 [Ll]og/
 [Ll]ogs/
@@ -76,8 +76,8 @@ StyleCopReport.xml
 *_h.h
 *.ilk
 *.meta
-*.obj
-*.iobj
+# *.obj
+# *.iobj
 *.pch
 *.pdb
 *.ipdb
