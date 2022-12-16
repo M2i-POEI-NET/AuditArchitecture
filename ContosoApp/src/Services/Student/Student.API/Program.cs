@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Student.API;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 

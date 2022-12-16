@@ -1,0 +1,990 @@
+2022-12-15 14:57:29.6779 Info Message Template Auto Format enabled
+2022-12-15 14:57:29.7766 Debug Setting 'NLog.Targets.FileTarget.name' to 'fileTarget'
+2022-12-15 14:57:29.8006 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'logs/${shortdate}.log'
+2022-12-15 14:57:29.8414 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${uppercase:${level}} ${message} '
+2022-12-15 14:57:29.8514 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.Inner' to '${level}'
+2022-12-15 14:57:29.8699 Debug Adding target FileTarget(Name=fileTarget)
+2022-12-15 14:57:29.8768 Info Registered target FileTarget(Name=fileTarget)
+2022-12-15 14:57:29.8768 Debug Setting 'NLog.Targets.FileTarget.name' to 'allfile'
+2022-12-15 14:57:29.8900 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral-${shortdate}.log'
+2022-12-15 14:57:29.8900 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate}|${level:uppercase=true}|${logger}|${message} ${exception:format=tostring}'
+2022-12-15 14:57:29.9403 Debug Adding target FileTarget(Name=allfile)
+2022-12-15 14:57:29.9403 Info Registered target FileTarget(Name=allfile)
+2022-12-15 14:57:29.9505 Debug Setting 'NLog.Targets.ConsoleTarget.name' to 'lifetimeConsole'
+2022-12-15 14:57:29.9505 Debug Setting 'NLog.Targets.ConsoleTarget.layout' to '${MicrosoftConsoleLayout}'
+2022-12-15 14:57:29.9602 Debug Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-12-15 14:57:29.9602 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-15 14:57:29.9754 Debug Setting 'NLog.Targets.FileTarget.name' to 'jsonFile'
+2022-12-15 14:57:29.9792 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral_json-${shortdate}.log'
+2022-12-15 14:57:29.9792 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate}|${level}|${logger}|${message}|${all-event-properties}{exception:format=tostring}'
+2022-12-15 14:57:29.9894 Debug Adding target FileTarget(Name=jsonFile)
+2022-12-15 14:57:29.9894 Info Registered target FileTarget(Name=jsonFile)
+2022-12-15 14:57:30.0236 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-15 14:57:30.0290 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-12-15 14:57:30.0290 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'sentry' not found for logging rule: *.
+2022-12-15 14:57:30.0551 Debug Watching file-filter 'NLog.config' in directory: /app
+2022-12-15 14:57:30.0630 Debug --- NLog configuration dump ---
+2022-12-15 14:57:30.0671 Debug Targets:
+2022-12-15 14:57:30.0671 Debug FileTarget(Name=fileTarget)
+2022-12-15 14:57:30.0762 Debug FileTarget(Name=allfile)
+2022-12-15 14:57:30.0762 Debug ConsoleTarget(Name=lifetimeConsole)
+2022-12-15 14:57:30.0762 Debug FileTarget(Name=jsonFile)
+2022-12-15 14:57:30.0869 Debug Rules:
+2022-12-15 14:57:30.0869 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ allfile ]
+2022-12-15 14:57:30.0966 Debug logNamePattern: (Microsoft.Hosting.Lifetime:Equals) levels: [ Info Warn Error Fatal ] writeTo: [ lifetimeConsole ]
+2022-12-15 14:57:30.0966 Debug logNamePattern: (Microsoft.:StartsWith) levels: [ Trace Debug Info ] writeTo: [ ]
+2022-12-15 14:57:30.0966 Debug logNamePattern: (System.Net.Http.:StartsWith) levels: [ Trace Debug Info ] writeTo: [ ]
+2022-12-15 14:57:30.1085 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ ]
+2022-12-15 14:57:30.1085 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ ]
+2022-12-15 14:57:30.1207 Debug --- End of NLog configuration dump ---
+2022-12-15 14:57:30.1494 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=54, FilePath=/app/NLog.config
+2022-12-15 14:57:30.1629 Debug Unused target checking is started... Rule Count: 6, Target Count: 4
+2022-12-15 14:57:30.1766 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: fileTarget
+2022-12-15 14:57:30.1766 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: jsonFile
+2022-12-15 14:57:30.1864 Debug Unused target checking is completed. Total Rule Count: 6, Total Target Count: 4, Unused Target Count: 2
+2022-12-15 14:57:30.2219 Debug Targets configured when LogLevel >= Info for Logger: Program
+2022-12-15 14:57:30.2278 Debug Logger Program [Info] => allfile
+2022-12-15 14:57:30.2363 Debug Logger Program [Warn] => allfile
+2022-12-15 14:57:30.2363 Debug Logger Program [Error] => allfile
+2022-12-15 14:57:30.2469 Debug Logger Program [Fatal] => allfile
+2022-12-15 14:57:30.3009 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2022-12-15 14:57:30.3060 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => allfile
+2022-12-15 14:57:30.3060 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => allfile
+2022-12-15 14:57:30.3162 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => allfile
+2022-12-15 14:57:30.3162 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => allfile
+2022-12-15 14:57:30.3489 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2022-12-15 14:57:30.3489 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => allfile
+2022-12-15 14:57:30.3597 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => allfile
+2022-12-15 14:57:30.3597 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => allfile
+2022-12-15 14:57:30.3701 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => allfile
+2022-12-15 14:57:30.3760 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Hosting.Lifetime
+2022-12-15 14:57:30.3760 Debug Logger Microsoft.Hosting.Lifetime [Info] => allfile lifetimeConsole
+2022-12-15 14:57:30.3760 Debug Logger Microsoft.Hosting.Lifetime [Warn] => allfile lifetimeConsole
+2022-12-15 14:57:30.3903 Debug Logger Microsoft.Hosting.Lifetime [Error] => allfile lifetimeConsole
+2022-12-15 14:57:30.3903 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => allfile lifetimeConsole
+2022-12-15 14:57:30.4185 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer
+2022-12-15 14:57:30.4185 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Info] => allfile
+2022-12-15 14:57:30.4263 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Warn] => allfile
+2022-12-15 14:57:30.4263 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Error] => allfile
+2022-12-15 14:57:30.4263 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Fatal] => allfile
+2022-12-15 14:57:30.4390 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware
+2022-12-15 14:57:30.4390 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Info] => allfile
+2022-12-15 14:57:30.4465 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Warn] => allfile
+2022-12-15 14:57:30.4465 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Error] => allfile
+2022-12-15 14:57:30.4465 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Fatal] => allfile
+2022-12-15 14:57:30.4586 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel
+2022-12-15 14:57:30.4586 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Info] => allfile
+2022-12-15 14:57:30.4675 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Warn] => allfile
+2022-12-15 14:57:30.4675 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Error] => allfile
+2022-12-15 14:57:30.4675 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Fatal] => allfile
+2022-12-15 14:57:30.4798 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.BadRequests
+2022-12-15 14:57:30.4798 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Info] => allfile
+2022-12-15 14:57:30.4887 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Warn] => allfile
+2022-12-15 14:57:30.4887 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Error] => allfile
+2022-12-15 14:57:30.4984 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Fatal] => allfile
+2022-12-15 14:57:30.4984 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2022-12-15 14:57:30.5079 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Info] => allfile
+2022-12-15 14:57:30.5079 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Warn] => allfile
+2022-12-15 14:57:30.5174 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Error] => allfile
+2022-12-15 14:57:30.5174 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Fatal] => allfile
+2022-12-15 14:57:30.5174 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Http2
+2022-12-15 14:57:30.5298 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Info] => allfile
+2022-12-15 14:57:30.5298 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Warn] => allfile
+2022-12-15 14:57:30.5383 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Error] => allfile
+2022-12-15 14:57:30.5383 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Fatal] => allfile
+2022-12-15 14:57:30.5466 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Http3
+2022-12-15 14:57:30.5466 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Info] => allfile
+2022-12-15 14:57:30.5466 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Warn] => allfile
+2022-12-15 14:57:30.5591 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Error] => allfile
+2022-12-15 14:57:30.5591 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Fatal] => allfile
+2022-12-15 14:57:30.5882 Debug Targets configured when LogLevel >= Info for Logger: Course.API
+2022-12-15 14:57:30.5882 Debug Logger Course.API [Info] => allfile
+2022-12-15 14:57:30.6011 Debug Logger Course.API [Warn] => allfile
+2022-12-15 14:57:30.6060 Debug Logger Course.API [Error] => allfile
+2022-12-15 14:57:30.6060 Debug Logger Course.API [Fatal] => allfile
+2022-12-15 14:57:31.0880 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Infrastructure
+2022-12-15 14:57:31.0880 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Info] => allfile
+2022-12-15 14:57:31.0965 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Warn] => allfile
+2022-12-15 14:57:31.0965 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Error] => allfile
+2022-12-15 14:57:31.0965 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Fatal] => allfile
+2022-12-15 14:57:31.2443 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.ChangeTracking
+2022-12-15 14:57:31.2485 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Info] => allfile
+2022-12-15 14:57:31.2485 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Warn] => allfile
+2022-12-15 14:57:31.2567 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Error] => allfile
+2022-12-15 14:57:31.2567 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Fatal] => allfile
+2022-12-15 14:57:31.2682 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Command
+2022-12-15 14:57:31.2682 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Info] => allfile
+2022-12-15 14:57:31.2682 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Warn] => allfile
+2022-12-15 14:57:31.2795 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Error] => allfile
+2022-12-15 14:57:31.2795 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Fatal] => allfile
+2022-12-15 14:57:31.2884 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Query
+2022-12-15 14:57:31.2884 Debug Logger Microsoft.EntityFrameworkCore.Query [Info] => allfile
+2022-12-15 14:57:31.2884 Debug Logger Microsoft.EntityFrameworkCore.Query [Warn] => allfile
+2022-12-15 14:57:31.2993 Debug Logger Microsoft.EntityFrameworkCore.Query [Error] => allfile
+2022-12-15 14:57:31.2993 Debug Logger Microsoft.EntityFrameworkCore.Query [Fatal] => allfile
+2022-12-15 14:57:31.3069 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Transaction
+2022-12-15 14:57:31.3069 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Info] => allfile
+2022-12-15 14:57:31.3069 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Warn] => allfile
+2022-12-15 14:57:31.3195 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Error] => allfile
+2022-12-15 14:57:31.3195 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Fatal] => allfile
+2022-12-15 14:57:31.3315 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Connection
+2022-12-15 14:57:31.3315 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Info] => allfile
+2022-12-15 14:57:31.3384 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Warn] => allfile
+2022-12-15 14:57:31.3384 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Error] => allfile
+2022-12-15 14:57:31.3384 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Fatal] => allfile
+2022-12-15 14:57:31.6580 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Model
+2022-12-15 14:57:31.6580 Debug Logger Microsoft.EntityFrameworkCore.Model [Info] => allfile
+2022-12-15 14:57:31.6663 Debug Logger Microsoft.EntityFrameworkCore.Model [Warn] => allfile
+2022-12-15 14:57:31.6663 Debug Logger Microsoft.EntityFrameworkCore.Model [Error] => allfile
+2022-12-15 14:57:31.6663 Debug Logger Microsoft.EntityFrameworkCore.Model [Fatal] => allfile
+2022-12-15 14:57:31.6791 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Model.Validation
+2022-12-15 14:57:31.6791 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Info] => allfile
+2022-12-15 14:57:31.6875 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Warn] => allfile
+2022-12-15 14:57:31.6875 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Error] => allfile
+2022-12-15 14:57:31.6963 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Fatal] => allfile
+2022-12-15 14:57:32.7467 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Update
+2022-12-15 14:57:32.7467 Debug Logger Microsoft.EntityFrameworkCore.Update [Info] => allfile
+2022-12-15 14:57:32.7467 Debug Logger Microsoft.EntityFrameworkCore.Update [Warn] => allfile
+2022-12-15 14:57:32.7582 Debug Logger Microsoft.EntityFrameworkCore.Update [Error] => allfile
+2022-12-15 14:57:32.7582 Debug Logger Microsoft.EntityFrameworkCore.Update [Fatal] => allfile
+2022-12-15 14:57:32.7866 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Migrations
+2022-12-15 14:57:32.7866 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Info] => allfile
+2022-12-15 14:57:32.7866 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Warn] => allfile
+2022-12-15 14:57:32.7982 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Error] => allfile
+2022-12-15 14:57:32.7982 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Fatal] => allfile
+2022-12-15 14:57:33.8535 Debug FileTarget(Name=allfile): Preparing for new file: '/app/bin/Debug/net6.0/C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral-2022-12-15.log'
+2022-12-15 14:57:33.8663 Debug FileTarget(Name=allfile): Creating file appender: '/app/bin/Debug/net6.0/C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral-2022-12-15.log'
+2022-12-15 14:57:34.0276 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2022-12-15 14:57:34.0276 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Info] => allfile
+2022-12-15 14:57:34.0276 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Warn] => allfile
+2022-12-15 14:57:34.0376 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Error] => allfile
+2022-12-15 14:57:34.0376 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Fatal] => allfile
+2022-12-15 14:57:34.1196 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2022-12-15 14:57:34.1196 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Info] => allfile
+2022-12-15 14:57:34.1273 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Warn] => allfile
+2022-12-15 14:57:34.1273 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Error] => allfile
+2022-12-15 14:57:34.1273 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Fatal] => allfile
+2022-12-15 14:57:34.1525 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2022-12-15 14:57:34.1560 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Info] => allfile
+2022-12-15 14:57:34.1560 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Warn] => allfile
+2022-12-15 14:57:34.1560 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Error] => allfile
+2022-12-15 14:57:34.1661 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Fatal] => allfile
+2022-12-15 14:57:34.1661 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2022-12-15 14:57:34.1661 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Info] => allfile
+2022-12-15 14:57:34.1771 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Warn] => allfile
+2022-12-15 14:57:34.1771 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Error] => allfile
+2022-12-15 14:57:34.1771 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Fatal] => allfile
+2022-12-15 14:57:34.2339 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2022-12-15 14:57:34.2377 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Info] => allfile
+2022-12-15 14:57:34.2377 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Warn] => allfile
+2022-12-15 14:57:34.2377 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Error] => allfile
+2022-12-15 14:57:34.2468 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Fatal] => allfile
+2022-12-15 14:57:34.2625 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2022-12-15 14:57:34.2664 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Info] => allfile
+2022-12-15 14:57:34.2664 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Warn] => allfile
+2022-12-15 14:57:34.2664 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Error] => allfile
+2022-12-15 14:57:34.2762 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Fatal] => allfile
+2022-12-15 14:57:34.2762 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware
+2022-12-15 14:57:34.2762 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Info] => allfile
+2022-12-15 14:57:34.2868 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Warn] => allfile
+2022-12-15 14:57:34.2868 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Error] => allfile
+2022-12-15 14:57:34.2868 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Fatal] => allfile
+2022-12-15 14:57:34.3146 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2022-12-15 14:57:34.3177 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Info] => allfile
+2022-12-15 14:57:34.3177 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Warn] => allfile
+2022-12-15 14:57:34.3177 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Error] => allfile
+2022-12-15 14:57:34.3269 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Fatal] => allfile
+2022-12-15 14:57:34.3269 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2022-12-15 14:57:34.3371 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Info] => allfile
+2022-12-15 14:57:34.3371 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Warn] => allfile
+2022-12-15 14:57:34.3371 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Error] => allfile
+2022-12-15 14:57:34.3371 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Fatal] => allfile
+2022-12-15 14:57:34.3572 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2022-12-15 14:57:34.3572 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Info] => allfile
+2022-12-15 14:57:34.3572 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Warn] => allfile
+2022-12-15 14:57:34.3660 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Error] => allfile
+2022-12-15 14:57:34.3660 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Fatal] => allfile
+2022-12-15 14:57:34.3660 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2022-12-15 14:57:34.3761 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Info] => allfile
+2022-12-15 14:57:34.3761 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Warn] => allfile
+2022-12-15 14:57:34.3761 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Error] => allfile
+2022-12-15 14:57:34.3862 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Fatal] => allfile
+2022-12-15 14:57:34.4114 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2022-12-15 14:57:34.4114 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Info] => allfile
+2022-12-15 14:57:34.4176 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Warn] => allfile
+2022-12-15 14:57:34.4176 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Error] => allfile
+2022-12-15 14:57:34.4176 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Fatal] => allfile
+2022-12-15 14:57:35.5894 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2022-12-15 14:57:35.5975 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Info] => allfile
+2022-12-15 14:57:35.5975 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Warn] => allfile
+2022-12-15 14:57:35.6117 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Error] => allfile
+2022-12-15 14:57:35.6215 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Fatal] => allfile
+2022-12-15 15:00:12.6773 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter
+2022-12-15 15:00:12.7014 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Info] => allfile
+2022-12-15 15:00:12.7493 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Warn] => allfile
+2022-12-15 15:00:12.7493 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Error] => allfile
+2022-12-15 15:00:12.7493 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Fatal] => allfile
+2022-12-15 15:00:12.7493 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter
+2022-12-15 15:00:12.7493 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Info] => allfile
+2022-12-15 15:00:12.7671 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Warn] => allfile
+2022-12-15 15:00:12.7671 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Error] => allfile
+2022-12-15 15:00:12.7671 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Fatal] => allfile
+2022-12-15 15:00:12.8069 Debug Targets configured when LogLevel >= Info for Logger: Course.API.Controllers.CoursesController
+2022-12-15 15:00:12.8069 Debug Logger Course.API.Controllers.CoursesController [Info] => allfile
+2022-12-15 15:00:12.8173 Debug Logger Course.API.Controllers.CoursesController [Warn] => allfile
+2022-12-15 15:00:12.8173 Debug Logger Course.API.Controllers.CoursesController [Error] => allfile
+2022-12-15 15:00:12.8173 Debug Logger Course.API.Controllers.CoursesController [Fatal] => allfile
+2022-12-15 15:00:13.3898 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector
+2022-12-15 15:00:13.3898 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Info] => allfile
+2022-12-15 15:00:13.3985 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Warn] => allfile
+2022-12-15 15:00:13.3985 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Error] => allfile
+2022-12-15 15:00:13.4064 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Fatal] => allfile
+2022-12-15 15:00:13.4064 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor
+2022-12-15 15:00:13.4159 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Info] => allfile
+2022-12-15 15:00:13.4159 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Warn] => allfile
+2022-12-15 15:00:13.4159 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Error] => allfile
+2022-12-15 15:00:13.4274 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Fatal] => allfile
+2022-12-15 15:07:58.2578 Info Message Template Auto Format enabled
+2022-12-15 15:07:58.3703 Debug Setting 'NLog.Targets.FileTarget.name' to 'fileTarget'
+2022-12-15 15:07:58.3968 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'logs/${shortdate}.log'
+2022-12-15 15:07:58.4391 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${uppercase:${level}} ${message} '
+2022-12-15 15:07:58.4521 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.Inner' to '${level}'
+2022-12-15 15:07:58.4655 Debug Adding target FileTarget(Name=fileTarget)
+2022-12-15 15:07:58.4743 Info Registered target FileTarget(Name=fileTarget)
+2022-12-15 15:07:58.4797 Debug Setting 'NLog.Targets.FileTarget.name' to 'allfile'
+2022-12-15 15:07:58.4797 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral-${shortdate}.log'
+2022-12-15 15:07:58.4940 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate}|${level:uppercase=true}|${logger}|${message} ${exception:format=tostring}'
+2022-12-15 15:07:58.5462 Debug Adding target FileTarget(Name=allfile)
+2022-12-15 15:07:58.5462 Info Registered target FileTarget(Name=allfile)
+2022-12-15 15:07:58.5562 Debug Setting 'NLog.Targets.ConsoleTarget.name' to 'lifetimeConsole'
+2022-12-15 15:07:58.5562 Debug Setting 'NLog.Targets.ConsoleTarget.layout' to '${MicrosoftConsoleLayout}'
+2022-12-15 15:07:58.5663 Debug Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-12-15 15:07:58.5663 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-15 15:07:58.5834 Debug Setting 'NLog.Targets.FileTarget.name' to 'jsonFile'
+2022-12-15 15:07:58.5891 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral_json-${shortdate}.log'
+2022-12-15 15:07:58.5891 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate}|${level}|${logger}|${message}|${all-event-properties}{exception:format=tostring}'
+2022-12-15 15:07:58.6017 Debug Adding target FileTarget(Name=jsonFile)
+2022-12-15 15:07:58.6068 Info Registered target FileTarget(Name=jsonFile)
+2022-12-15 15:07:58.6470 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-15 15:07:58.6470 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-12-15 15:07:58.6570 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'sentry' not found for logging rule: *.
+2022-12-15 15:07:58.6792 Debug Watching file-filter 'NLog.config' in directory: /app
+2022-12-15 15:07:58.6867 Debug --- NLog configuration dump ---
+2022-12-15 15:07:58.6867 Debug Targets:
+2022-12-15 15:07:58.6982 Debug FileTarget(Name=fileTarget)
+2022-12-15 15:07:58.6982 Debug FileTarget(Name=allfile)
+2022-12-15 15:07:58.7070 Debug ConsoleTarget(Name=lifetimeConsole)
+2022-12-15 15:07:58.7070 Debug FileTarget(Name=jsonFile)
+2022-12-15 15:07:58.7160 Debug Rules:
+2022-12-15 15:07:58.7160 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ allfile ]
+2022-12-15 15:07:58.7292 Debug logNamePattern: (Microsoft.Hosting.Lifetime:Equals) levels: [ Info Warn Error Fatal ] writeTo: [ lifetimeConsole ]
+2022-12-15 15:07:58.7292 Debug logNamePattern: (Microsoft.:StartsWith) levels: [ Trace Debug Info ] writeTo: [ ]
+2022-12-15 15:07:58.7375 Debug logNamePattern: (System.Net.Http.:StartsWith) levels: [ Trace Debug Info ] writeTo: [ ]
+2022-12-15 15:07:58.7375 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ ]
+2022-12-15 15:07:58.7466 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ ]
+2022-12-15 15:07:58.7466 Debug --- End of NLog configuration dump ---
+2022-12-15 15:07:58.7748 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=54, FilePath=/app/NLog.config
+2022-12-15 15:07:58.7844 Debug Unused target checking is started... Rule Count: 6, Target Count: 4
+2022-12-15 15:07:58.7972 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: fileTarget
+2022-12-15 15:07:58.7972 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: jsonFile
+2022-12-15 15:07:58.8068 Debug Unused target checking is completed. Total Rule Count: 6, Total Target Count: 4, Unused Target Count: 2
+2022-12-15 15:07:58.8328 Debug Targets configured when LogLevel >= Info for Logger: Program
+2022-12-15 15:07:58.8373 Debug Logger Program [Info] => allfile
+2022-12-15 15:07:58.8373 Debug Logger Program [Warn] => allfile
+2022-12-15 15:07:58.8460 Debug Logger Program [Error] => allfile
+2022-12-15 15:07:58.8460 Debug Logger Program [Fatal] => allfile
+2022-12-15 15:07:58.9056 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2022-12-15 15:07:58.9102 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => allfile
+2022-12-15 15:07:58.9161 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => allfile
+2022-12-15 15:07:58.9161 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => allfile
+2022-12-15 15:07:58.9272 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => allfile
+2022-12-15 15:07:58.9528 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2022-12-15 15:07:58.9578 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => allfile
+2022-12-15 15:07:58.9578 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => allfile
+2022-12-15 15:07:58.9673 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => allfile
+2022-12-15 15:07:58.9673 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => allfile
+2022-12-15 15:07:58.9772 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Hosting.Lifetime
+2022-12-15 15:07:58.9772 Debug Logger Microsoft.Hosting.Lifetime [Info] => allfile lifetimeConsole
+2022-12-15 15:07:58.9772 Debug Logger Microsoft.Hosting.Lifetime [Warn] => allfile lifetimeConsole
+2022-12-15 15:07:58.9888 Debug Logger Microsoft.Hosting.Lifetime [Error] => allfile lifetimeConsole
+2022-12-15 15:07:58.9888 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => allfile lifetimeConsole
+2022-12-15 15:07:59.0131 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer
+2022-12-15 15:07:59.0180 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Info] => allfile
+2022-12-15 15:07:59.0180 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Warn] => allfile
+2022-12-15 15:07:59.0300 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Error] => allfile
+2022-12-15 15:07:59.0364 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Fatal] => allfile
+2022-12-15 15:07:59.0364 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware
+2022-12-15 15:07:59.0464 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Info] => allfile
+2022-12-15 15:07:59.0464 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Warn] => allfile
+2022-12-15 15:07:59.0572 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Error] => allfile
+2022-12-15 15:07:59.0572 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Fatal] => allfile
+2022-12-15 15:07:59.0701 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel
+2022-12-15 15:07:59.0701 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Info] => allfile
+2022-12-15 15:07:59.0783 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Warn] => allfile
+2022-12-15 15:07:59.0783 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Error] => allfile
+2022-12-15 15:07:59.0863 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Fatal] => allfile
+2022-12-15 15:07:59.0863 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.BadRequests
+2022-12-15 15:07:59.0863 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Info] => allfile
+2022-12-15 15:07:59.0980 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Warn] => allfile
+2022-12-15 15:07:59.0980 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Error] => allfile
+2022-12-15 15:07:59.0980 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Fatal] => allfile
+2022-12-15 15:07:59.1093 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2022-12-15 15:07:59.1093 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Info] => allfile
+2022-12-15 15:07:59.1174 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Warn] => allfile
+2022-12-15 15:07:59.1174 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Error] => allfile
+2022-12-15 15:07:59.1174 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Fatal] => allfile
+2022-12-15 15:07:59.1289 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Http2
+2022-12-15 15:07:59.1289 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Info] => allfile
+2022-12-15 15:07:59.1363 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Warn] => allfile
+2022-12-15 15:07:59.1363 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Error] => allfile
+2022-12-15 15:07:59.1363 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Fatal] => allfile
+2022-12-15 15:07:59.1474 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Http3
+2022-12-15 15:07:59.1474 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Info] => allfile
+2022-12-15 15:07:59.1474 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Warn] => allfile
+2022-12-15 15:07:59.1592 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Error] => allfile
+2022-12-15 15:07:59.1592 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Fatal] => allfile
+2022-12-15 15:07:59.1776 Debug Targets configured when LogLevel >= Info for Logger: Course.API
+2022-12-15 15:07:59.1776 Debug Logger Course.API [Info] => allfile
+2022-12-15 15:07:59.1776 Debug Logger Course.API [Warn] => allfile
+2022-12-15 15:07:59.1897 Debug Logger Course.API [Error] => allfile
+2022-12-15 15:07:59.1897 Debug Logger Course.API [Fatal] => allfile
+2022-12-15 15:07:59.6186 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Infrastructure
+2022-12-15 15:07:59.6186 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Info] => allfile
+2022-12-15 15:07:59.6279 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Warn] => allfile
+2022-12-15 15:07:59.6279 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Error] => allfile
+2022-12-15 15:07:59.6360 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Fatal] => allfile
+2022-12-15 15:07:59.8002 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.ChangeTracking
+2022-12-15 15:07:59.8002 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Info] => allfile
+2022-12-15 15:07:59.8112 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Warn] => allfile
+2022-12-15 15:07:59.8163 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Error] => allfile
+2022-12-15 15:07:59.8163 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Fatal] => allfile
+2022-12-15 15:07:59.8321 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Command
+2022-12-15 15:07:59.8321 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Info] => allfile
+2022-12-15 15:07:59.8397 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Warn] => allfile
+2022-12-15 15:07:59.8397 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Error] => allfile
+2022-12-15 15:07:59.8466 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Fatal] => allfile
+2022-12-15 15:07:59.8466 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Query
+2022-12-15 15:07:59.8466 Debug Logger Microsoft.EntityFrameworkCore.Query [Info] => allfile
+2022-12-15 15:07:59.8570 Debug Logger Microsoft.EntityFrameworkCore.Query [Warn] => allfile
+2022-12-15 15:07:59.8570 Debug Logger Microsoft.EntityFrameworkCore.Query [Error] => allfile
+2022-12-15 15:07:59.8570 Debug Logger Microsoft.EntityFrameworkCore.Query [Fatal] => allfile
+2022-12-15 15:07:59.8682 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Transaction
+2022-12-15 15:07:59.8682 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Info] => allfile
+2022-12-15 15:07:59.8682 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Warn] => allfile
+2022-12-15 15:07:59.8784 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Error] => allfile
+2022-12-15 15:07:59.8784 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Fatal] => allfile
+2022-12-15 15:07:59.8921 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Connection
+2022-12-15 15:07:59.8961 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Info] => allfile
+2022-12-15 15:07:59.8961 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Warn] => allfile
+2022-12-15 15:07:59.8961 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Error] => allfile
+2022-12-15 15:07:59.9067 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Fatal] => allfile
+2022-12-15 15:08:00.1630 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Model
+2022-12-15 15:08:00.1664 Debug Logger Microsoft.EntityFrameworkCore.Model [Info] => allfile
+2022-12-15 15:08:00.1664 Debug Logger Microsoft.EntityFrameworkCore.Model [Warn] => allfile
+2022-12-15 15:08:00.1664 Debug Logger Microsoft.EntityFrameworkCore.Model [Error] => allfile
+2022-12-15 15:08:00.1761 Debug Logger Microsoft.EntityFrameworkCore.Model [Fatal] => allfile
+2022-12-15 15:08:00.1761 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Model.Validation
+2022-12-15 15:08:00.1761 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Info] => allfile
+2022-12-15 15:08:00.1870 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Warn] => allfile
+2022-12-15 15:08:00.1870 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Error] => allfile
+2022-12-15 15:08:00.1870 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Fatal] => allfile
+2022-12-15 15:08:01.2376 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Update
+2022-12-15 15:08:01.2376 Debug Logger Microsoft.EntityFrameworkCore.Update [Info] => allfile
+2022-12-15 15:08:01.2376 Debug Logger Microsoft.EntityFrameworkCore.Update [Warn] => allfile
+2022-12-15 15:08:01.2489 Debug Logger Microsoft.EntityFrameworkCore.Update [Error] => allfile
+2022-12-15 15:08:01.2489 Debug Logger Microsoft.EntityFrameworkCore.Update [Fatal] => allfile
+2022-12-15 15:08:01.2742 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Migrations
+2022-12-15 15:08:01.2774 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Info] => allfile
+2022-12-15 15:08:01.2774 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Warn] => allfile
+2022-12-15 15:08:01.2774 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Error] => allfile
+2022-12-15 15:08:01.2886 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Fatal] => allfile
+2022-12-15 15:08:02.3516 Debug FileTarget(Name=allfile): Preparing for new file: '/app/bin/Debug/net6.0/C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral-2022-12-15.log'
+2022-12-15 15:08:02.3703 Debug FileTarget(Name=allfile): Creating file appender: '/app/bin/Debug/net6.0/C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral-2022-12-15.log'
+2022-12-15 15:08:02.5955 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2022-12-15 15:08:02.5990 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Info] => allfile
+2022-12-15 15:08:02.5990 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Warn] => allfile
+2022-12-15 15:08:02.6059 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Error] => allfile
+2022-12-15 15:08:02.6059 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Fatal] => allfile
+2022-12-15 15:08:02.6767 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2022-12-15 15:08:02.6767 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Info] => allfile
+2022-12-15 15:08:02.6767 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Warn] => allfile
+2022-12-15 15:08:02.6867 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Error] => allfile
+2022-12-15 15:08:02.6867 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Fatal] => allfile
+2022-12-15 15:08:02.7053 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2022-12-15 15:08:02.7085 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Info] => allfile
+2022-12-15 15:08:02.7085 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Warn] => allfile
+2022-12-15 15:08:02.7085 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Error] => allfile
+2022-12-15 15:08:02.7182 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Fatal] => allfile
+2022-12-15 15:08:02.7182 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2022-12-15 15:08:02.7260 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Info] => allfile
+2022-12-15 15:08:02.7260 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Warn] => allfile
+2022-12-15 15:08:02.7260 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Error] => allfile
+2022-12-15 15:08:02.7361 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Fatal] => allfile
+2022-12-15 15:08:02.7862 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2022-12-15 15:08:02.7862 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Info] => allfile
+2022-12-15 15:08:02.7862 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Warn] => allfile
+2022-12-15 15:08:02.7984 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Error] => allfile
+2022-12-15 15:08:02.7984 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Fatal] => allfile
+2022-12-15 15:08:02.8175 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2022-12-15 15:08:02.8175 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Info] => allfile
+2022-12-15 15:08:02.8175 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Warn] => allfile
+2022-12-15 15:08:02.8290 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Error] => allfile
+2022-12-15 15:08:02.8290 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Fatal] => allfile
+2022-12-15 15:08:02.8373 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware
+2022-12-15 15:08:02.8373 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Info] => allfile
+2022-12-15 15:08:02.8373 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Warn] => allfile
+2022-12-15 15:08:02.8488 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Error] => allfile
+2022-12-15 15:08:02.8488 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Fatal] => allfile
+2022-12-15 15:08:02.8715 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2022-12-15 15:08:02.8715 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Info] => allfile
+2022-12-15 15:08:02.8783 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Warn] => allfile
+2022-12-15 15:08:02.8783 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Error] => allfile
+2022-12-15 15:08:02.8783 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Fatal] => allfile
+2022-12-15 15:08:02.8927 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2022-12-15 15:08:02.8927 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Info] => allfile
+2022-12-15 15:08:02.8989 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Warn] => allfile
+2022-12-15 15:08:02.8989 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Error] => allfile
+2022-12-15 15:08:02.8989 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Fatal] => allfile
+2022-12-15 15:08:02.9148 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2022-12-15 15:08:02.9182 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Info] => allfile
+2022-12-15 15:08:02.9182 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Warn] => allfile
+2022-12-15 15:08:02.9266 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Error] => allfile
+2022-12-15 15:08:02.9266 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Fatal] => allfile
+2022-12-15 15:08:02.9266 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2022-12-15 15:08:02.9381 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Info] => allfile
+2022-12-15 15:08:02.9381 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Warn] => allfile
+2022-12-15 15:08:02.9381 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Error] => allfile
+2022-12-15 15:08:02.9482 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Fatal] => allfile
+2022-12-15 15:08:02.9700 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2022-12-15 15:08:02.9700 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Info] => allfile
+2022-12-15 15:08:02.9767 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Warn] => allfile
+2022-12-15 15:08:02.9767 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Error] => allfile
+2022-12-15 15:08:02.9767 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Fatal] => allfile
+2022-12-15 15:08:04.0077 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2022-12-15 15:08:04.0077 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Info] => allfile
+2022-12-15 15:08:04.0167 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Warn] => allfile
+2022-12-15 15:08:04.0167 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Error] => allfile
+2022-12-15 15:08:04.0267 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Fatal] => allfile
+2022-12-15 15:10:16.1517 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter
+2022-12-15 15:10:16.1517 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Info] => allfile
+2022-12-15 15:10:16.1604 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Warn] => allfile
+2022-12-15 15:10:16.1604 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Error] => allfile
+2022-12-15 15:10:16.1675 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Fatal] => allfile
+2022-12-15 15:10:16.1675 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter
+2022-12-15 15:10:16.1770 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Info] => allfile
+2022-12-15 15:10:16.1770 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Warn] => allfile
+2022-12-15 15:10:16.1770 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Error] => allfile
+2022-12-15 15:10:16.1892 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Fatal] => allfile
+2022-12-15 15:10:16.2483 Debug Targets configured when LogLevel >= Info for Logger: Course.API.Controllers.CoursesController
+2022-12-15 15:10:16.2483 Debug Logger Course.API.Controllers.CoursesController [Info] => allfile
+2022-12-15 15:10:16.2483 Debug Logger Course.API.Controllers.CoursesController [Warn] => allfile
+2022-12-15 15:10:16.2589 Debug Logger Course.API.Controllers.CoursesController [Error] => allfile
+2022-12-15 15:10:16.2589 Debug Logger Course.API.Controllers.CoursesController [Fatal] => allfile
+2022-12-15 15:10:16.8563 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector
+2022-12-15 15:10:16.8563 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Info] => allfile
+2022-12-15 15:10:16.8563 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Warn] => allfile
+2022-12-15 15:10:16.8682 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Error] => allfile
+2022-12-15 15:10:16.8682 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Fatal] => allfile
+2022-12-15 15:10:16.8682 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor
+2022-12-15 15:10:16.8793 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Info] => allfile
+2022-12-15 15:10:16.8793 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Warn] => allfile
+2022-12-15 15:10:16.8793 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Error] => allfile
+2022-12-15 15:10:16.9232 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Fatal] => allfile
+2022-12-15 15:22:26.4270 Info Message Template Auto Format enabled
+2022-12-15 15:22:26.4990 Debug Setting 'NLog.Targets.FileTarget.name' to 'fileTarget'
+2022-12-15 15:22:26.5119 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'logs/${shortdate}.log'
+2022-12-15 15:22:26.5410 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${uppercase:${level}} ${message} '
+2022-12-15 15:22:26.5505 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.Inner' to '${level}'
+2022-12-15 15:22:26.5603 Debug Adding target FileTarget(Name=fileTarget)
+2022-12-15 15:22:26.5661 Info Registered target FileTarget(Name=fileTarget)
+2022-12-15 15:22:26.5661 Debug Setting 'NLog.Targets.FileTarget.name' to 'allfile'
+2022-12-15 15:22:26.5661 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral-${shortdate}.log'
+2022-12-15 15:22:26.5767 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate}|${level:uppercase=true}|${logger}|${message} ${exception:format=tostring}'
+2022-12-15 15:22:26.6025 Debug Adding target FileTarget(Name=allfile)
+2022-12-15 15:22:26.6057 Info Registered target FileTarget(Name=allfile)
+2022-12-15 15:22:26.6057 Debug Setting 'NLog.Targets.ConsoleTarget.name' to 'lifetimeConsole'
+2022-12-15 15:22:26.6057 Debug Setting 'NLog.Targets.ConsoleTarget.layout' to '${MicrosoftConsoleLayout}'
+2022-12-15 15:22:26.6180 Debug Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-12-15 15:22:26.6180 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-15 15:22:26.6305 Debug Setting 'NLog.Targets.FileTarget.name' to 'jsonFile'
+2022-12-15 15:22:26.6305 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral_json-${shortdate}.log'
+2022-12-15 15:22:26.6373 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate}|${level}|${logger}|${message}|${all-event-properties}{exception:format=tostring}'
+2022-12-15 15:22:26.6373 Debug Adding target FileTarget(Name=jsonFile)
+2022-12-15 15:22:26.6467 Info Registered target FileTarget(Name=jsonFile)
+2022-12-15 15:22:26.6749 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-15 15:22:26.6796 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-12-15 15:22:26.6796 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'sentry' not found for logging rule: *.
+2022-12-15 15:22:26.7029 Debug Watching file-filter 'NLog.config' in directory: /app
+2022-12-15 15:22:26.7097 Debug --- NLog configuration dump ---
+2022-12-15 15:22:26.7097 Debug Targets:
+2022-12-15 15:22:26.7196 Debug FileTarget(Name=fileTarget)
+2022-12-15 15:22:26.7196 Debug FileTarget(Name=allfile)
+2022-12-15 15:22:26.7267 Debug ConsoleTarget(Name=lifetimeConsole)
+2022-12-15 15:22:26.7267 Debug FileTarget(Name=jsonFile)
+2022-12-15 15:22:26.7267 Debug Rules:
+2022-12-15 15:22:26.7416 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ allfile ]
+2022-12-15 15:22:26.7416 Debug logNamePattern: (Microsoft.Hosting.Lifetime:Equals) levels: [ Info Warn Error Fatal ] writeTo: [ lifetimeConsole ]
+2022-12-15 15:22:26.7483 Debug logNamePattern: (Microsoft.:StartsWith) levels: [ Trace Debug Info ] writeTo: [ ]
+2022-12-15 15:22:26.7483 Debug logNamePattern: (System.Net.Http.:StartsWith) levels: [ Trace Debug Info ] writeTo: [ ]
+2022-12-15 15:22:26.7483 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ ]
+2022-12-15 15:22:26.7589 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ ]
+2022-12-15 15:22:26.7589 Debug --- End of NLog configuration dump ---
+2022-12-15 15:22:26.7787 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=54, FilePath=/app/NLog.config
+2022-12-15 15:22:26.7878 Debug Unused target checking is started... Rule Count: 6, Target Count: 4
+2022-12-15 15:22:26.7975 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: fileTarget
+2022-12-15 15:22:26.7975 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: jsonFile
+2022-12-15 15:22:26.7975 Debug Unused target checking is completed. Total Rule Count: 6, Total Target Count: 4, Unused Target Count: 2
+2022-12-15 15:22:26.8258 Debug Targets configured when LogLevel >= Info for Logger: Program
+2022-12-15 15:22:26.8258 Debug Logger Program [Info] => allfile
+2022-12-15 15:22:26.8258 Debug Logger Program [Warn] => allfile
+2022-12-15 15:22:26.8370 Debug Logger Program [Error] => allfile
+2022-12-15 15:22:26.8370 Debug Logger Program [Fatal] => allfile
+2022-12-15 15:22:26.8807 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2022-12-15 15:22:26.8807 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => allfile
+2022-12-15 15:22:26.8867 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => allfile
+2022-12-15 15:22:26.8867 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => allfile
+2022-12-15 15:22:26.8867 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => allfile
+2022-12-15 15:22:26.9055 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2022-12-15 15:22:26.9087 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => allfile
+2022-12-15 15:22:26.9087 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => allfile
+2022-12-15 15:22:26.9087 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => allfile
+2022-12-15 15:22:26.9183 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => allfile
+2022-12-15 15:22:26.9183 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Hosting.Lifetime
+2022-12-15 15:22:26.9183 Debug Logger Microsoft.Hosting.Lifetime [Info] => allfile lifetimeConsole
+2022-12-15 15:22:26.9293 Debug Logger Microsoft.Hosting.Lifetime [Warn] => allfile lifetimeConsole
+2022-12-15 15:22:26.9293 Debug Logger Microsoft.Hosting.Lifetime [Error] => allfile lifetimeConsole
+2022-12-15 15:22:26.9366 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => allfile lifetimeConsole
+2022-12-15 15:22:26.9546 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer
+2022-12-15 15:22:26.9581 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Info] => allfile
+2022-12-15 15:22:26.9581 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Warn] => allfile
+2022-12-15 15:22:26.9581 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Error] => allfile
+2022-12-15 15:22:26.9679 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Fatal] => allfile
+2022-12-15 15:22:26.9679 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware
+2022-12-15 15:22:26.9679 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Info] => allfile
+2022-12-15 15:22:26.9784 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Warn] => allfile
+2022-12-15 15:22:26.9784 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Error] => allfile
+2022-12-15 15:22:26.9784 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Fatal] => allfile
+2022-12-15 15:22:26.9885 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel
+2022-12-15 15:22:26.9885 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Info] => allfile
+2022-12-15 15:22:26.9885 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Warn] => allfile
+2022-12-15 15:22:26.9991 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Error] => allfile
+2022-12-15 15:22:26.9991 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Fatal] => allfile
+2022-12-15 15:22:27.0069 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.BadRequests
+2022-12-15 15:22:27.0069 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Info] => allfile
+2022-12-15 15:22:27.0069 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Warn] => allfile
+2022-12-15 15:22:27.0166 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Error] => allfile
+2022-12-15 15:22:27.0166 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Fatal] => allfile
+2022-12-15 15:22:27.0166 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2022-12-15 15:22:27.0263 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Info] => allfile
+2022-12-15 15:22:27.0263 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Warn] => allfile
+2022-12-15 15:22:27.0263 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Error] => allfile
+2022-12-15 15:22:27.0360 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Fatal] => allfile
+2022-12-15 15:22:27.0360 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Http2
+2022-12-15 15:22:27.0360 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Info] => allfile
+2022-12-15 15:22:27.0467 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Warn] => allfile
+2022-12-15 15:22:27.0467 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Error] => allfile
+2022-12-15 15:22:27.0467 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Fatal] => allfile
+2022-12-15 15:22:27.0566 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Http3
+2022-12-15 15:22:27.0566 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Info] => allfile
+2022-12-15 15:22:27.0566 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Warn] => allfile
+2022-12-15 15:22:27.0661 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Error] => allfile
+2022-12-15 15:22:27.0661 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Fatal] => allfile
+2022-12-15 15:22:27.0873 Debug Targets configured when LogLevel >= Info for Logger: Course.API
+2022-12-15 15:22:27.0873 Debug Logger Course.API [Info] => allfile
+2022-12-15 15:22:27.0873 Debug Logger Course.API [Warn] => allfile
+2022-12-15 15:22:27.0972 Debug Logger Course.API [Error] => allfile
+2022-12-15 15:22:27.0972 Debug Logger Course.API [Fatal] => allfile
+2022-12-15 15:22:27.5273 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Infrastructure
+2022-12-15 15:22:27.5273 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Info] => allfile
+2022-12-15 15:22:27.5273 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Warn] => allfile
+2022-12-15 15:22:27.6028 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Error] => allfile
+2022-12-15 15:22:27.6065 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Fatal] => allfile
+2022-12-15 15:22:27.7413 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.ChangeTracking
+2022-12-15 15:22:27.7413 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Info] => allfile
+2022-12-15 15:22:27.7496 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Warn] => allfile
+2022-12-15 15:22:27.7496 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Error] => allfile
+2022-12-15 15:22:27.7583 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Fatal] => allfile
+2022-12-15 15:22:27.7674 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Command
+2022-12-15 15:22:27.7674 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Info] => allfile
+2022-12-15 15:22:27.7674 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Warn] => allfile
+2022-12-15 15:22:27.7788 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Error] => allfile
+2022-12-15 15:22:27.7788 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Fatal] => allfile
+2022-12-15 15:22:27.7866 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Query
+2022-12-15 15:22:27.7866 Debug Logger Microsoft.EntityFrameworkCore.Query [Info] => allfile
+2022-12-15 15:22:27.7866 Debug Logger Microsoft.EntityFrameworkCore.Query [Warn] => allfile
+2022-12-15 15:22:27.7973 Debug Logger Microsoft.EntityFrameworkCore.Query [Error] => allfile
+2022-12-15 15:22:27.7973 Debug Logger Microsoft.EntityFrameworkCore.Query [Fatal] => allfile
+2022-12-15 15:22:27.7973 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Transaction
+2022-12-15 15:22:27.8072 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Info] => allfile
+2022-12-15 15:22:27.8072 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Warn] => allfile
+2022-12-15 15:22:27.8072 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Error] => allfile
+2022-12-15 15:22:27.8173 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Fatal] => allfile
+2022-12-15 15:22:27.8173 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Connection
+2022-12-15 15:22:27.8276 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Info] => allfile
+2022-12-15 15:22:27.8276 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Warn] => allfile
+2022-12-15 15:22:27.8276 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Error] => allfile
+2022-12-15 15:22:27.8368 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Fatal] => allfile
+2022-12-15 15:22:28.1091 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Model
+2022-12-15 15:22:28.1091 Debug Logger Microsoft.EntityFrameworkCore.Model [Info] => allfile
+2022-12-15 15:22:28.1157 Debug Logger Microsoft.EntityFrameworkCore.Model [Warn] => allfile
+2022-12-15 15:22:28.1157 Debug Logger Microsoft.EntityFrameworkCore.Model [Error] => allfile
+2022-12-15 15:22:28.1157 Debug Logger Microsoft.EntityFrameworkCore.Model [Fatal] => allfile
+2022-12-15 15:22:28.1257 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Model.Validation
+2022-12-15 15:22:28.1257 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Info] => allfile
+2022-12-15 15:22:28.1257 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Warn] => allfile
+2022-12-15 15:22:28.1257 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Error] => allfile
+2022-12-15 15:22:28.1385 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Fatal] => allfile
+2022-12-15 15:22:29.2985 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Update
+2022-12-15 15:22:29.2985 Debug Logger Microsoft.EntityFrameworkCore.Update [Info] => allfile
+2022-12-15 15:22:29.3063 Debug Logger Microsoft.EntityFrameworkCore.Update [Warn] => allfile
+2022-12-15 15:22:29.3063 Debug Logger Microsoft.EntityFrameworkCore.Update [Error] => allfile
+2022-12-15 15:22:29.3063 Debug Logger Microsoft.EntityFrameworkCore.Update [Fatal] => allfile
+2022-12-15 15:22:29.3369 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Migrations
+2022-12-15 15:22:29.3369 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Info] => allfile
+2022-12-15 15:22:29.3369 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Warn] => allfile
+2022-12-15 15:22:29.3472 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Error] => allfile
+2022-12-15 15:22:29.3472 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Fatal] => allfile
+2022-12-15 15:22:30.3845 Debug FileTarget(Name=allfile): Preparing for new file: '/app/bin/Debug/net6.0/C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral-2022-12-15.log'
+2022-12-15 15:22:30.4362 Debug FileTarget(Name=allfile): Creating file appender: '/app/bin/Debug/net6.0/C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral-2022-12-15.log'
+2022-12-15 15:22:30.5875 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2022-12-15 15:22:30.5875 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Info] => allfile
+2022-12-15 15:22:30.5875 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Warn] => allfile
+2022-12-15 15:22:30.5975 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Error] => allfile
+2022-12-15 15:22:30.5975 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Fatal] => allfile
+2022-12-15 15:22:30.6679 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2022-12-15 15:22:30.6679 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Info] => allfile
+2022-12-15 15:22:30.6679 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Warn] => allfile
+2022-12-15 15:22:30.6776 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Error] => allfile
+2022-12-15 15:22:30.6776 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Fatal] => allfile
+2022-12-15 15:22:30.6951 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2022-12-15 15:22:30.6989 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Info] => allfile
+2022-12-15 15:22:30.6989 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Warn] => allfile
+2022-12-15 15:22:30.6989 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Error] => allfile
+2022-12-15 15:22:30.7077 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Fatal] => allfile
+2022-12-15 15:22:30.7077 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2022-12-15 15:22:30.7160 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Info] => allfile
+2022-12-15 15:22:30.7160 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Warn] => allfile
+2022-12-15 15:22:30.7160 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Error] => allfile
+2022-12-15 15:22:30.7274 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Fatal] => allfile
+2022-12-15 15:22:30.7788 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2022-12-15 15:22:30.7788 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Info] => allfile
+2022-12-15 15:22:30.7860 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Warn] => allfile
+2022-12-15 15:22:30.7860 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Error] => allfile
+2022-12-15 15:22:30.7860 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Fatal] => allfile
+2022-12-15 15:22:30.8125 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2022-12-15 15:22:30.8164 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Info] => allfile
+2022-12-15 15:22:30.8164 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Warn] => allfile
+2022-12-15 15:22:30.8164 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Error] => allfile
+2022-12-15 15:22:30.8290 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Fatal] => allfile
+2022-12-15 15:22:30.8290 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware
+2022-12-15 15:22:30.8386 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Info] => allfile
+2022-12-15 15:22:30.8386 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Warn] => allfile
+2022-12-15 15:22:30.8464 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Error] => allfile
+2022-12-15 15:22:30.8464 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Fatal] => allfile
+2022-12-15 15:22:30.8771 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2022-12-15 15:22:30.8771 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Info] => allfile
+2022-12-15 15:22:30.8771 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Warn] => allfile
+2022-12-15 15:22:30.8884 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Error] => allfile
+2022-12-15 15:22:30.8884 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Fatal] => allfile
+2022-12-15 15:22:30.9022 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2022-12-15 15:22:30.9022 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Info] => allfile
+2022-12-15 15:22:30.9085 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Warn] => allfile
+2022-12-15 15:22:30.9085 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Error] => allfile
+2022-12-15 15:22:30.9085 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Fatal] => allfile
+2022-12-15 15:22:30.9281 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2022-12-15 15:22:30.9281 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Info] => allfile
+2022-12-15 15:22:30.9281 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Warn] => allfile
+2022-12-15 15:22:30.9380 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Error] => allfile
+2022-12-15 15:22:30.9380 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Fatal] => allfile
+2022-12-15 15:22:30.9380 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2022-12-15 15:22:30.9488 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Info] => allfile
+2022-12-15 15:22:30.9488 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Warn] => allfile
+2022-12-15 15:22:30.9488 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Error] => allfile
+2022-12-15 15:22:30.9577 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Fatal] => allfile
+2022-12-15 15:22:30.9806 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2022-12-15 15:22:30.9806 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Info] => allfile
+2022-12-15 15:22:30.9864 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Warn] => allfile
+2022-12-15 15:22:30.9864 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Error] => allfile
+2022-12-15 15:22:30.9864 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Fatal] => allfile
+2022-12-15 15:22:31.9489 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2022-12-15 15:22:31.9489 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Info] => allfile
+2022-12-15 15:22:31.9599 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Warn] => allfile
+2022-12-15 15:22:31.9668 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Error] => allfile
+2022-12-15 15:22:31.9668 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Fatal] => allfile
+2022-12-15 15:22:55.5483 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter
+2022-12-15 15:22:55.5483 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Info] => allfile
+2022-12-15 15:22:55.5580 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Warn] => allfile
+2022-12-15 15:22:55.5580 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Error] => allfile
+2022-12-15 15:22:55.5580 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Fatal] => allfile
+2022-12-15 15:22:55.5688 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter
+2022-12-15 15:22:55.5688 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Info] => allfile
+2022-12-15 15:22:55.5771 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Warn] => allfile
+2022-12-15 15:22:55.5771 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Error] => allfile
+2022-12-15 15:22:55.5771 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Fatal] => allfile
+2022-12-15 15:22:55.6175 Debug Targets configured when LogLevel >= Info for Logger: Course.API.Controllers.CoursesController
+2022-12-15 15:22:55.6175 Debug Logger Course.API.Controllers.CoursesController [Info] => allfile
+2022-12-15 15:22:55.6175 Debug Logger Course.API.Controllers.CoursesController [Warn] => allfile
+2022-12-15 15:22:55.6288 Debug Logger Course.API.Controllers.CoursesController [Error] => allfile
+2022-12-15 15:22:55.6288 Debug Logger Course.API.Controllers.CoursesController [Fatal] => allfile
+2022-12-15 15:22:55.6449 Debug ScanAssembly('NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-12-15 15:22:55.6487 Debug No file exists at candidate config file location: /app/bin/Debug/net6.0/nlog.Development.config
+2022-12-15 15:22:55.6487 Debug No file exists at candidate config file location: /app/bin/Debug/net6.0/nlog.development.config
+2022-12-15 15:22:56.1723 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector
+2022-12-15 15:22:56.1723 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Info] => allfile
+2022-12-15 15:22:56.1794 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Warn] => allfile
+2022-12-15 15:22:56.1794 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Error] => allfile
+2022-12-15 15:22:56.1794 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Fatal] => allfile
+2022-12-15 15:22:56.1902 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor
+2022-12-15 15:22:56.1902 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Info] => allfile
+2022-12-15 15:22:56.1964 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Warn] => allfile
+2022-12-15 15:22:56.1964 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Error] => allfile
+2022-12-15 15:22:56.1964 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Fatal] => allfile
+2022-12-15 15:23:10.5177 Debug ScanAssembly('NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2022-12-15 15:23:10.5177 Debug No file exists at candidate config file location: /app/bin/Debug/net6.0/nlog.Development.config
+2022-12-15 15:23:10.5261 Debug No file exists at candidate config file location: /app/bin/Debug/net6.0/nlog.development.config
+2022-12-15 15:25:10.9065 Info Message Template Auto Format enabled
+2022-12-15 15:25:10.9748 Debug Setting 'NLog.Targets.FileTarget.name' to 'fileTarget'
+2022-12-15 15:25:10.9919 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'logs/${shortdate}.log'
+2022-12-15 15:25:11.0252 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate} ${uppercase:${level}} ${message} '
+2022-12-15 15:25:11.0345 Debug Setting 'NLog.LayoutRenderers.Wrappers.UppercaseLayoutRendererWrapper.Inner' to '${level}'
+2022-12-15 15:25:11.0476 Debug Adding target FileTarget(Name=fileTarget)
+2022-12-15 15:25:11.0476 Info Registered target FileTarget(Name=fileTarget)
+2022-12-15 15:25:11.0624 Debug Setting 'NLog.Targets.FileTarget.name' to 'allfile'
+2022-12-15 15:25:11.0686 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral-${shortdate}.log'
+2022-12-15 15:25:11.0686 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate}|${level:uppercase=true}|${logger}|${message} ${exception:format=tostring}'
+2022-12-15 15:25:11.1179 Debug Adding target FileTarget(Name=allfile)
+2022-12-15 15:25:11.1179 Info Registered target FileTarget(Name=allfile)
+2022-12-15 15:25:11.1287 Debug Setting 'NLog.Targets.ConsoleTarget.name' to 'lifetimeConsole'
+2022-12-15 15:25:11.1287 Debug Setting 'NLog.Targets.ConsoleTarget.layout' to '${MicrosoftConsoleLayout}'
+2022-12-15 15:25:11.1394 Debug Adding target ConsoleTarget(Name=lifetimeConsole)
+2022-12-15 15:25:11.1394 Info Registered target ConsoleTarget(Name=lifetimeConsole)
+2022-12-15 15:25:11.1574 Debug Setting 'NLog.Targets.FileTarget.name' to 'jsonFile'
+2022-12-15 15:25:11.2326 Debug Setting 'NLog.Targets.FileTarget.fileName' to 'C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral_json-${shortdate}.log'
+2022-12-15 15:25:11.2366 Debug Setting 'NLog.Targets.FileTarget.layout' to '${longdate}|${level}|${logger}|${message}|${all-event-properties}{exception:format=tostring}'
+2022-12-15 15:25:11.2366 Debug Adding target FileTarget(Name=jsonFile)
+2022-12-15 15:25:11.2366 Info Registered target FileTarget(Name=jsonFile)
+2022-12-15 15:25:11.2739 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: Microsoft.Hosting.Lifetime.
+2022-12-15 15:25:11.2795 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'ownFile-web' not found for logging rule: *.
+2022-12-15 15:25:11.2795 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Target 'sentry' not found for logging rule: *.
+2022-12-15 15:25:11.3091 Debug Watching file-filter 'NLog.config' in directory: /app
+2022-12-15 15:25:11.3188 Debug --- NLog configuration dump ---
+2022-12-15 15:25:11.3188 Debug Targets:
+2022-12-15 15:25:11.3297 Debug FileTarget(Name=fileTarget)
+2022-12-15 15:25:11.3297 Debug FileTarget(Name=allfile)
+2022-12-15 15:25:11.3376 Debug ConsoleTarget(Name=lifetimeConsole)
+2022-12-15 15:25:11.3376 Debug FileTarget(Name=jsonFile)
+2022-12-15 15:25:11.3462 Debug Rules:
+2022-12-15 15:25:11.3462 Debug logNamePattern: (:All) levels: [ Info Warn Error Fatal ] writeTo: [ allfile ]
+2022-12-15 15:25:11.3586 Debug logNamePattern: (Microsoft.Hosting.Lifetime:Equals) levels: [ Info Warn Error Fatal ] writeTo: [ lifetimeConsole ]
+2022-12-15 15:25:11.3586 Debug logNamePattern: (Microsoft.:StartsWith) levels: [ Trace Debug Info ] writeTo: [ ]
+2022-12-15 15:25:11.3679 Debug logNamePattern: (System.Net.Http.:StartsWith) levels: [ Trace Debug Info ] writeTo: [ ]
+2022-12-15 15:25:11.3679 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ ]
+2022-12-15 15:25:11.3759 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] writeTo: [ ]
+2022-12-15 15:25:11.3759 Debug --- End of NLog configuration dump ---
+2022-12-15 15:25:11.4056 Info Validating config: TargetNames=allfile, lifetimeConsole, ConfigItems=54, FilePath=/app/NLog.config
+2022-12-15 15:25:11.4206 Debug Unused target checking is started... Rule Count: 6, Target Count: 4
+2022-12-15 15:25:11.4348 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: fileTarget
+2022-12-15 15:25:11.4400 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: jsonFile
+2022-12-15 15:25:11.4462 Debug Unused target checking is completed. Total Rule Count: 6, Total Target Count: 4, Unused Target Count: 2
+2022-12-15 15:25:11.4799 Debug Targets configured when LogLevel >= Info for Logger: Program
+2022-12-15 15:25:11.4799 Debug Logger Program [Info] => allfile
+2022-12-15 15:25:11.4909 Debug Logger Program [Warn] => allfile
+2022-12-15 15:25:11.4909 Debug Logger Program [Error] => allfile
+2022-12-15 15:25:11.4994 Debug Logger Program [Fatal] => allfile
+2022-12-15 15:25:11.5395 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.ApplicationLifetime
+2022-12-15 15:25:11.5395 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Info] => allfile
+2022-12-15 15:25:11.5478 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Warn] => allfile
+2022-12-15 15:25:11.5478 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Error] => allfile
+2022-12-15 15:25:11.5569 Debug Logger Microsoft.Extensions.Hosting.Internal.ApplicationLifetime [Fatal] => allfile
+2022-12-15 15:25:11.5766 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Extensions.Hosting.Internal.Host
+2022-12-15 15:25:11.5766 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Info] => allfile
+2022-12-15 15:25:11.5766 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Warn] => allfile
+2022-12-15 15:25:11.5879 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Error] => allfile
+2022-12-15 15:25:11.5879 Debug Logger Microsoft.Extensions.Hosting.Internal.Host [Fatal] => allfile
+2022-12-15 15:25:11.5962 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.Hosting.Lifetime
+2022-12-15 15:25:11.5962 Debug Logger Microsoft.Hosting.Lifetime [Info] => allfile lifetimeConsole
+2022-12-15 15:25:11.5962 Debug Logger Microsoft.Hosting.Lifetime [Warn] => allfile lifetimeConsole
+2022-12-15 15:25:11.6079 Debug Logger Microsoft.Hosting.Lifetime [Error] => allfile lifetimeConsole
+2022-12-15 15:25:11.6079 Debug Logger Microsoft.Hosting.Lifetime [Fatal] => allfile lifetimeConsole
+2022-12-15 15:25:11.6330 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer
+2022-12-15 15:25:11.6377 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Info] => allfile
+2022-12-15 15:25:11.6377 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Warn] => allfile
+2022-12-15 15:25:11.6474 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Error] => allfile
+2022-12-15 15:25:11.6474 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServer [Fatal] => allfile
+2022-12-15 15:25:11.6574 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware
+2022-12-15 15:25:11.6574 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Info] => allfile
+2022-12-15 15:25:11.6663 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Warn] => allfile
+2022-12-15 15:25:11.6663 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Error] => allfile
+2022-12-15 15:25:11.6663 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware [Fatal] => allfile
+2022-12-15 15:25:11.6802 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel
+2022-12-15 15:25:11.6802 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Info] => allfile
+2022-12-15 15:25:11.6869 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Warn] => allfile
+2022-12-15 15:25:11.6869 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Error] => allfile
+2022-12-15 15:25:11.6869 Debug Logger Microsoft.AspNetCore.Server.Kestrel [Fatal] => allfile
+2022-12-15 15:25:11.6990 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.BadRequests
+2022-12-15 15:25:11.6990 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Info] => allfile
+2022-12-15 15:25:11.7073 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Warn] => allfile
+2022-12-15 15:25:11.7073 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Error] => allfile
+2022-12-15 15:25:11.7073 Debug Logger Microsoft.AspNetCore.Server.Kestrel.BadRequests [Fatal] => allfile
+2022-12-15 15:25:11.7207 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Connections
+2022-12-15 15:25:11.7207 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Info] => allfile
+2022-12-15 15:25:11.7294 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Warn] => allfile
+2022-12-15 15:25:11.7294 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Error] => allfile
+2022-12-15 15:25:11.7372 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Connections [Fatal] => allfile
+2022-12-15 15:25:11.7372 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Http2
+2022-12-15 15:25:11.7461 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Info] => allfile
+2022-12-15 15:25:11.7461 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Warn] => allfile
+2022-12-15 15:25:11.7461 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Error] => allfile
+2022-12-15 15:25:11.7587 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http2 [Fatal] => allfile
+2022-12-15 15:25:11.7587 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Http3
+2022-12-15 15:25:11.7683 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Info] => allfile
+2022-12-15 15:25:11.7683 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Warn] => allfile
+2022-12-15 15:25:11.7776 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Error] => allfile
+2022-12-15 15:25:11.7776 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Http3 [Fatal] => allfile
+2022-12-15 15:25:11.8065 Debug Targets configured when LogLevel >= Info for Logger: Course.API
+2022-12-15 15:25:11.8065 Debug Logger Course.API [Info] => allfile
+2022-12-15 15:25:11.8164 Debug Logger Course.API [Warn] => allfile
+2022-12-15 15:25:11.8164 Debug Logger Course.API [Error] => allfile
+2022-12-15 15:25:11.8164 Debug Logger Course.API [Fatal] => allfile
+2022-12-15 15:25:12.4276 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Infrastructure
+2022-12-15 15:25:12.4276 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Info] => allfile
+2022-12-15 15:25:12.4376 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Warn] => allfile
+2022-12-15 15:25:12.4376 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Error] => allfile
+2022-12-15 15:25:12.4475 Debug Logger Microsoft.EntityFrameworkCore.Infrastructure [Fatal] => allfile
+2022-12-15 15:25:12.6354 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.ChangeTracking
+2022-12-15 15:25:12.6443 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Info] => allfile
+2022-12-15 15:25:12.6489 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Warn] => allfile
+2022-12-15 15:25:12.6489 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Error] => allfile
+2022-12-15 15:25:12.6591 Debug Logger Microsoft.EntityFrameworkCore.ChangeTracking [Fatal] => allfile
+2022-12-15 15:25:12.6701 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Command
+2022-12-15 15:25:12.6701 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Info] => allfile
+2022-12-15 15:25:12.6800 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Warn] => allfile
+2022-12-15 15:25:12.6800 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Error] => allfile
+2022-12-15 15:25:12.6891 Debug Logger Microsoft.EntityFrameworkCore.Database.Command [Fatal] => allfile
+2022-12-15 15:25:12.6891 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Query
+2022-12-15 15:25:12.6987 Debug Logger Microsoft.EntityFrameworkCore.Query [Info] => allfile
+2022-12-15 15:25:12.6987 Debug Logger Microsoft.EntityFrameworkCore.Query [Warn] => allfile
+2022-12-15 15:25:12.7079 Debug Logger Microsoft.EntityFrameworkCore.Query [Error] => allfile
+2022-12-15 15:25:12.7079 Debug Logger Microsoft.EntityFrameworkCore.Query [Fatal] => allfile
+2022-12-15 15:25:12.7175 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Transaction
+2022-12-15 15:25:12.7175 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Info] => allfile
+2022-12-15 15:25:12.7269 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Warn] => allfile
+2022-12-15 15:25:12.7269 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Error] => allfile
+2022-12-15 15:25:12.7269 Debug Logger Microsoft.EntityFrameworkCore.Database.Transaction [Fatal] => allfile
+2022-12-15 15:25:12.7462 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Database.Connection
+2022-12-15 15:25:12.7462 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Info] => allfile
+2022-12-15 15:25:12.7563 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Warn] => allfile
+2022-12-15 15:25:12.7563 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Error] => allfile
+2022-12-15 15:25:12.7665 Debug Logger Microsoft.EntityFrameworkCore.Database.Connection [Fatal] => allfile
+2022-12-15 15:25:13.1482 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Model
+2022-12-15 15:25:13.1482 Debug Logger Microsoft.EntityFrameworkCore.Model [Info] => allfile
+2022-12-15 15:25:13.1582 Debug Logger Microsoft.EntityFrameworkCore.Model [Warn] => allfile
+2022-12-15 15:25:13.1582 Debug Logger Microsoft.EntityFrameworkCore.Model [Error] => allfile
+2022-12-15 15:25:13.1680 Debug Logger Microsoft.EntityFrameworkCore.Model [Fatal] => allfile
+2022-12-15 15:25:13.1765 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Model.Validation
+2022-12-15 15:25:13.1765 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Info] => allfile
+2022-12-15 15:25:13.1878 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Warn] => allfile
+2022-12-15 15:25:13.1878 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Error] => allfile
+2022-12-15 15:25:13.1999 Debug Logger Microsoft.EntityFrameworkCore.Model.Validation [Fatal] => allfile
+2022-12-15 15:25:14.6607 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Update
+2022-12-15 15:25:14.6607 Debug Logger Microsoft.EntityFrameworkCore.Update [Info] => allfile
+2022-12-15 15:25:14.6693 Debug Logger Microsoft.EntityFrameworkCore.Update [Warn] => allfile
+2022-12-15 15:25:14.6693 Debug Logger Microsoft.EntityFrameworkCore.Update [Error] => allfile
+2022-12-15 15:25:14.6781 Debug Logger Microsoft.EntityFrameworkCore.Update [Fatal] => allfile
+2022-12-15 15:25:14.7097 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.EntityFrameworkCore.Migrations
+2022-12-15 15:25:14.7097 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Info] => allfile
+2022-12-15 15:25:14.7097 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Warn] => allfile
+2022-12-15 15:25:14.7097 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Error] => allfile
+2022-12-15 15:25:14.7097 Debug Logger Microsoft.EntityFrameworkCore.Migrations [Fatal] => allfile
+2022-12-15 15:25:15.7218 Debug FileTarget(Name=allfile): Preparing for new file: '/app/bin/Debug/net6.0/C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral-2022-12-15.log'
+2022-12-15 15:25:15.7332 Debug FileTarget(Name=allfile): Creating file appender: '/app/bin/Debug/net6.0/C:\Users\PSE-CONSULTING\Source\Repos\DemoMicroService\ContosoApp\src\Services\Course\LogFiles\CourseAPIGeneral-2022-12-15.log'
+2022-12-15 15:25:15.8902 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter
+2022-12-15 15:25:15.8902 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Info] => allfile
+2022-12-15 15:25:15.8964 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Warn] => allfile
+2022-12-15 15:25:15.8964 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Error] => allfile
+2022-12-15 15:25:15.8964 Debug Logger Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter [Fatal] => allfile
+2022-12-15 15:25:15.9723 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory
+2022-12-15 15:25:15.9723 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Info] => allfile
+2022-12-15 15:25:15.9788 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Warn] => allfile
+2022-12-15 15:25:15.9788 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Error] => allfile
+2022-12-15 15:25:15.9788 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ModelBinderFactory [Fatal] => allfile
+2022-12-15 15:25:15.9995 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder
+2022-12-15 15:25:15.9995 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Info] => allfile
+2022-12-15 15:25:16.0062 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Warn] => allfile
+2022-12-15 15:25:16.0062 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Error] => allfile
+2022-12-15 15:25:16.0062 Debug Logger Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder [Fatal] => allfile
+2022-12-15 15:25:16.0178 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker
+2022-12-15 15:25:16.0178 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Info] => allfile
+2022-12-15 15:25:16.0178 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Warn] => allfile
+2022-12-15 15:25:16.0276 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Error] => allfile
+2022-12-15 15:25:16.0276 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker [Fatal] => allfile
+2022-12-15 15:25:16.0787 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Hosting.Diagnostics
+2022-12-15 15:25:16.0787 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Info] => allfile
+2022-12-15 15:25:16.0787 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Warn] => allfile
+2022-12-15 15:25:16.0881 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Error] => allfile
+2022-12-15 15:25:16.0881 Debug Logger Microsoft.AspNetCore.Hosting.Diagnostics [Fatal] => allfile
+2022-12-15 15:25:16.1064 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.EndpointMiddleware
+2022-12-15 15:25:16.1064 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Info] => allfile
+2022-12-15 15:25:16.1064 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Warn] => allfile
+2022-12-15 15:25:16.1167 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Error] => allfile
+2022-12-15 15:25:16.1167 Debug Logger Microsoft.AspNetCore.Routing.EndpointMiddleware [Fatal] => allfile
+2022-12-15 15:25:16.1167 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware
+2022-12-15 15:25:16.1277 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Info] => allfile
+2022-12-15 15:25:16.1277 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Warn] => allfile
+2022-12-15 15:25:16.1277 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Error] => allfile
+2022-12-15 15:25:16.1368 Debug Logger Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware [Fatal] => allfile
+2022-12-15 15:25:16.1590 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware
+2022-12-15 15:25:16.1590 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Info] => allfile
+2022-12-15 15:25:16.1590 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Warn] => allfile
+2022-12-15 15:25:16.1685 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Error] => allfile
+2022-12-15 15:25:16.1685 Debug Logger Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware [Fatal] => allfile
+2022-12-15 15:25:16.1790 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware
+2022-12-15 15:25:16.1790 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Info] => allfile
+2022-12-15 15:25:16.1864 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Warn] => allfile
+2022-12-15 15:25:16.1864 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Error] => allfile
+2022-12-15 15:25:16.1864 Debug Logger Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware [Fatal] => allfile
+2022-12-15 15:25:16.2039 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware
+2022-12-15 15:25:16.2070 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Info] => allfile
+2022-12-15 15:25:16.2070 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Warn] => allfile
+2022-12-15 15:25:16.2070 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Error] => allfile
+2022-12-15 15:25:16.2174 Debug Logger Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware [Fatal] => allfile
+2022-12-15 15:25:16.2174 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware
+2022-12-15 15:25:16.2174 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Info] => allfile
+2022-12-15 15:25:16.2275 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Warn] => allfile
+2022-12-15 15:25:16.2275 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Error] => allfile
+2022-12-15 15:25:16.2275 Debug Logger Microsoft.AspNetCore.HostFiltering.HostFilteringMiddleware [Fatal] => allfile
+2022-12-15 15:25:16.2547 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets
+2022-12-15 15:25:16.2580 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Info] => allfile
+2022-12-15 15:25:16.2580 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Warn] => allfile
+2022-12-15 15:25:16.2580 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Error] => allfile
+2022-12-15 15:25:16.2679 Debug Logger Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets [Fatal] => allfile
+2022-12-15 15:25:17.1598 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Routing.Matching.DfaMatcher
+2022-12-15 15:25:17.1598 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Info] => allfile
+2022-12-15 15:25:17.1677 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Warn] => allfile
+2022-12-15 15:25:17.1677 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Error] => allfile
+2022-12-15 15:25:17.1803 Debug Logger Microsoft.AspNetCore.Routing.Matching.DfaMatcher [Fatal] => allfile
+2022-12-15 15:25:34.3675 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter
+2022-12-15 15:25:34.3675 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Info] => allfile
+2022-12-15 15:25:34.3675 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Warn] => allfile
+2022-12-15 15:25:34.3786 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Error] => allfile
+2022-12-15 15:25:34.3786 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter [Fatal] => allfile
+2022-12-15 15:25:34.3786 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter
+2022-12-15 15:25:34.3902 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Info] => allfile
+2022-12-15 15:25:34.3902 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Warn] => allfile
+2022-12-15 15:25:34.3902 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Error] => allfile
+2022-12-15 15:25:34.3985 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter [Fatal] => allfile
+2022-12-15 15:25:34.4389 Debug Targets configured when LogLevel >= Info for Logger: Course.API.Controllers.CoursesController
+2022-12-15 15:25:34.4389 Debug Logger Course.API.Controllers.CoursesController [Info] => allfile
+2022-12-15 15:25:34.4494 Debug Logger Course.API.Controllers.CoursesController [Warn] => allfile
+2022-12-15 15:25:34.4494 Debug Logger Course.API.Controllers.CoursesController [Error] => allfile
+2022-12-15 15:25:34.4583 Debug Logger Course.API.Controllers.CoursesController [Fatal] => allfile
+2022-12-15 15:25:35.0186 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector
+2022-12-15 15:25:35.0186 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Info] => allfile
+2022-12-15 15:25:35.0186 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Warn] => allfile
+2022-12-15 15:25:35.0283 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Error] => allfile
+2022-12-15 15:25:35.0283 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.DefaultOutputFormatterSelector [Fatal] => allfile
+2022-12-15 15:25:35.0283 Debug Targets configured when LogLevel >= Info for Logger: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor
+2022-12-15 15:25:35.0387 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Info] => allfile
+2022-12-15 15:25:35.0387 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Warn] => allfile
+2022-12-15 15:25:35.0387 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Error] => allfile
+2022-12-15 15:25:35.0387 Debug Logger Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor [Fatal] => allfile

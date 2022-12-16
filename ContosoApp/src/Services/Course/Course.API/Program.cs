@@ -1,6 +1,15 @@
 using Course.API;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("logs/generallog.txt",
+    restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information,
+    rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+Log.Information("Starting our service");
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,6 +26,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 

@@ -21,6 +21,8 @@ namespace Course.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Model.Entities.Course>>> GetCourses()
         {
+            _logger.LogWarning("still get list");
+            _logger.LogInformation("still get list count 2");
             return await _context.Courses.ToListAsync();
         }
 
