@@ -20,6 +20,7 @@ namespace Student.API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Model.Entities.Student>>> GetStudents()
         {
+            _logger.LogWarning("still get list of students");
             return await _context.Students.ToListAsync();
         }
 

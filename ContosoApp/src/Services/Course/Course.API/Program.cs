@@ -5,11 +5,12 @@ using Serilog;
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .WriteTo.File("logs/generallog.txt",
+    //.WriteTo.File(builder.Configuration.GetValue<string>("_Logging:GeneralLogFilePath"),
     restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information,
     rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
-Log.Information("Starting our service");
+Log.Information("Starting Micro Service Course API");
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

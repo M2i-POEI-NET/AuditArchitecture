@@ -2,7 +2,18 @@ using Microsoft.EntityFrameworkCore;
 using Student.API;
 using Serilog;
 
+
+
 var builder = WebApplication.CreateBuilder(args);
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("logs/generallog.txt",
+    //.WriteTo.File(builder.Configuration.GetValue<string>("_Logging:GeneralLogFilePath"),
+    restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information,
+    rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+Log.Information("Starting Micro Service Student API");
 
 // Add services to the container.
 
